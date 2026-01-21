@@ -24,7 +24,9 @@ const Projects = () => {
                     <h6 className='project-card-text'>Anshad Muhammed Portfolio</h6>
                 </div>
                 <div style={{ justifyContent: "center", marginLeft: "auto", backgroundColor: "transparent" }}>
+                    <a style={{backgroundColor:"transparent"}} href="https://anshadmuhammed.netlify.app" target="_blank" rel="noopener noreferrer">
                     <button style={{ backgroundColor: 'rgb(172, 215, 71)', fontSize: "12px", color: 'black', border: 'none', padding: '14px 25px', borderRadius: '15px', fontWeight: "bold", marginRight: "20px" }}> Current Link <FaLink className='button-link' /></button>
+                    </a>
                 </div>
             </div>
 
