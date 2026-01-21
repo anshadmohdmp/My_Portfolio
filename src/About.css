@@ -1,0 +1,101 @@
+
+ .about-tag {
+  background: rgba(172, 215, 71, 0.13);
+  color: rgb(172, 215, 71);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 8px 25px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.about-title {
+    font-size: 60px; 
+    font-weight: bold;
+    margin-left: 150px; 
+    font-style: italic;
+  }
+
+@media (max-width: 1400px) {
+
+  .about-title {
+    text-align: left !important;
+    font-size: 28px !important;
+    margin-left: 30px !important;
+    
+  }
+
+  /* Stack sections */
+  .about-wrapper {
+    flex-direction: column;
+    padding: 0 15px;
+    margin-top: 70px !important ; /* optional small horizontal padding */
+  }
+
+  /* Left and Right sections full width and reset margins */
+  .about-left,
+  .about-right {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Paragraphs */
+  .about-text p {
+    width: 100% !important;
+    margin: 15px auto !important;
+    text-align: center;
+    margin-top: 20px !important;
+  }
+
+  /* Tags */
+  .about-tags {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; /* ⭐ THIS IS THE KEY */
+    align-items: center;
+    width: 100% !important;
+    margin: 40px auto !important;
+    padding: 8px 25px !important;
+    text-align: center;
+    
+  }
+
+  .about-tag {
+    width: fit-content;   /* ⭐ auto width */
+    margin: 0 auto;  
+    padding: 8px 25px !important;  
+    margin-bottom: 20px !important;   /* ⭐ center */
+  }
+
+
+
+
+  /* Cards → 2 per row */
+  .about-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100% !important;
+    margin: 20px auto !important;
+    padding: 0;
+  }
+
+  /* Right section order */
+  .about-right {
+    order: 3;
+  }
+
+  /* Optional: add some spacing at top of paragraphs */
+  .about-text {
+    order: 1;
+    margin-top: 30px !important;
+  }
+
+}

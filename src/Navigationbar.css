@@ -1,0 +1,120 @@
+/* =========================
+   Base Navbar Styles
+========================= */
+
+.navbar,
+.navbar a,
+.navbar-brand,
+.nav-link,
+.dropdown-item {
+  color: white !important;
+  font-size: 14px;
+}
+
+
+
+/* Hover Effects */
+.nav-link:hover {
+  color: rgb(172, 215, 71) !important;
+  transform: scale(1.1);
+}
+
+.dropdown-item:hover,
+.navbar-brand:hover {
+  color: rgb(172, 215, 71) !important;
+  transform: scale(1.1);
+}
+
+/* Smooth Transitions & GPU Hinting */
+.nav-link,
+.dropdown-item,
+.navbar-brand {
+  transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              color 180ms ease;
+  will-change: transform, color;
+  transform-origin: center;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .nav-link,
+  .dropdown-item,
+  .navbar-brand {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Resume Button Hover */
+.resumebutton {
+  display: inline-block;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.resumebutton:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   Mobile-Specific Adjustments
+========================= */
+
+/* Tablets & small desktops */
+@media (max-width: 900px) {
+  .navbar {
+    margin: 20px 12px !important;
+  }
+
+  .navbar-brand img {
+    height: 40px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .navbar-brand span {
+    font-size: 18px !important;
+  }
+
+  .nav-link {
+    padding: 10px 8px !important;
+    font-size: 13px !important;
+  }
+
+  .resumebutton button {
+    width: 100%;
+    padding: 10px 0 !important;
+    font-size: 13px !important;
+    margin-top: 10px;
+    text-align: center;
+
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 728px) {
+  .navbar {
+    margin: 12px 8px !important;
+  }
+
+  .navbar-brand span {
+    font-size: 16px !important;
+  }
+
+  .nav-link {
+    padding: 8px 0 !important;
+    text-align: center;
+  }
+
+  /* Center the resume button on mobile */
+  .resumebutton {
+    display: block;
+    width: fit-content; /* button size fits content */
+    margin: 10px auto;  /* centers the button horizontally */
+    text-align: center;
+  }
+
+  .resumebutton button {
+    width: auto; /* keep original button size */
+  }
+}

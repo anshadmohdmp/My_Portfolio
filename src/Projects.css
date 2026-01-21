@@ -1,0 +1,121 @@
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.grid-card:hover {
+    transform: scale(1.05);
+}
+
+#projects {
+  padding-bottom: 120px;
+}
+
+/* Featured card */
+.project-card {
+  background-color: rgba(20, 20, 20, 1);
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+  margin: 100px auto;
+}
+
+.project-card-tag{
+  font-size: 12px;
+  color: rgb(172, 215, 71);
+  background-color: transparent;
+}
+
+.project-card-text {
+  font-weight: bold;
+  font-style: italic; 
+  color: white;
+  font-size: 24px; 
+  background-color: transparent; 
+}
+
+/* Grid container - desktop */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row desktop */
+  gap: 20px;
+  width: 80%;
+  margin: 40px auto;
+}
+
+.button-link{
+  color: black; 
+  background-color: transparent;
+  width: 14px;
+  height: 14px; 
+}
+
+/* Grid cards */
+.grid-card {
+  background-color: rgba(172, 215, 71, 0.061);
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%; /* fills the grid column */
+}
+
+@media (max-width: 1400px) {
+
+  /* Make the featured card full width */
+.title {
+    text-align: left !important;
+    font-size: 28px !important;
+    margin-left: 30px !important;
+    margin-top: 90px !important;
+    
+  }
+
+  .project-card {
+    width: 90% !important;
+    margin: 50px auto !important;
+    margin-top: 70px !important;
+  }
+
+  .project-card-text{
+    font-size: 18px !important;
+  }
+
+  .project-card2 {
+    width: 90% !important;
+    margin: 20px auto !important;
+  }
+
+  /* Projects grid: 1 card per row */
+  .projects-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 90% !important;
+    margin: 30px auto !important;
+  }
+
+  /* Center buttons inside cards */
+  .project-card button {
+    margin: 20px auto 0 auto !important;
+    display: block !important;
+    font-size: 10px !important;
+  }
+
+  .project-card-tag{
+    font-size: 10px !important;
+  }
+
+  .button-link{
+    width: 10px !important;
+    height: 10px !important; 
+  }
+
+  /* Center text if needed */
+  .project-card p,
+  .project-card h3,
+  .project-card h6 {
+    text-align: center !important;
+  }
+
+}

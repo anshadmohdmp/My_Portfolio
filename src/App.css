@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+:root {
+  --scroll-offset: 100px; /* default offset for fragment navigation */
+}
+
+/* Apply offset to main sections so the navbar doesn't overlap them when using hash links */
+#home,
+#about,
+#projects,
+#skills,
+#contact {
+  scroll-margin-top: var(--scroll-offset);
+}
+
+@media (max-width: 768px) {
+  /* slightly smaller offset on mobile */
+  :root { --scroll-offset: 120px; }
+}
+
+/* Projects grid and card styles */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background-color: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  color: white;
+}
+
+/* For non-Bootstrap project-card (the small div cards) apply padding here */
+.project-card:not(.featured-card) {
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+/* Featured card adjustments so it matches the project-cards but sits centered */
+.featured-card {
+  width: 80%;
+  margin: 50px auto;
+  border-radius: 15px;
+}
+
+.featured-card .card-body {
+  padding: 20px;
+}
+
+/* Ensure CPU logo badge has clean background without inheritance */
+.project-card > div:first-child {
+  background-color: rgba(172, 215, 71, 0.13) !important;
+}
+
+/* About cards: right-side 2x2 grid */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* Skills cards: 4-column grid */
+#skills .about-cards {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* 3D effect for skill cards on hover */
+.skill-card {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
+}
+
+/* Individual glow colors for each skill card */
+.javascript-card:hover {
+  box-shadow: 0 12px 30px rgba(247, 223, 30, 0.3), inset 0 0 30px rgba(247, 223, 30, 0.2), 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.react-card:hover {
+  box-shadow: 0 12px 30px rgba(97, 218, 251, 0.3), inset 0 0 30px rgba(97, 218, 251, 0.2), 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.tailwind-card:hover {
+  box-shadow: 0 12px 30px rgba(6, 182, 212, 0.3), inset 0 0 30px rgba(6, 182, 212, 0.2), 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.bootstrap-card:hover {
+  box-shadow: 0 12px 30px rgba(121, 82, 179, 0.3), inset 0 0 30px rgba(121, 82, 179, 0.2), 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.redux-card:hover {
+  box-shadow: 0 12px 30px rgba(118, 74, 188, 0.3), inset 0 0 30px rgba(118, 74, 188, 0.2), 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.nodejs-card:hover {
+  box-shadow: 0 12px 30px rgba(51, 153, 51, 0.3), inset 0 0 30px rgba(51, 153, 51, 0.2), 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.mongodb-card:hover {
+  box-shadow: 0 12px 30px rgba(19, 170, 82, 0.3), inset 0 0 30px rgba(19, 170, 82, 0.2), 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.postman-card:hover {
+  box-shadow: 0 12px 30px rgba(255, 108, 55, 0.3), inset 0 0 30px rgba(255, 108, 55, 0.2), 0 8px 16px rgba(0,0,0,0.6);
+}
+
+.about-card {
+  background-color: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+@media (max-width: 900px) {
+  .about-cards { grid-template-columns: 1fr; }
+}
+
+/* Responsive adjustments for tablets and phones */
+@media (max-width: 900px) {
+  #home h1, #about h1, #skills h1 {
+    font-size: 40px !important;
+    margin-left: 20px !important;
+    text-align: left;
+  }
+
+  #home p, #about p {
+    width: auto !important;
+    margin-left: 20px !important;
+    padding-right: 20px;
+  }
+
+  /* Skills: reduce columns on medium screens */
+  #skills .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .featured-card {
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .about-card { min-height: 100px; padding: 12px; }
+}
+
+@media (max-width: 480px) {
+  :root { --scroll-offset: 140px; }
+
+  /* Stack skill cards to single column on small phones */
+  #skills .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make images responsive */
+  img { max-width: 100%; height: auto; }
+
+  /* Reduce hero spacing & font sizes */
+  #home h1, #about h1, #skills h1 {
+    font-size: 28px !important;
+    margin-left: 16px !important;
+  }
+
+  /* Contact form container responsive override */
+  #contact > div > div {
+    width: 92% !important;
+    padding: 20px !important;
+    margin: 0 8px !important;
+  }
+
+  /* Make nav links easier to tap */
+  .nav-link { padding: 10px 8px !important; }
+  .resumebutton button { padding: 10px 14px !important; border-radius: 20px; }
+}
+

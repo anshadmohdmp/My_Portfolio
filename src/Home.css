@@ -1,0 +1,170 @@
+.exploreprojects:hover{
+    transform: scale(1.05);
+    background-color: transparent !important;
+    color: rgb(172, 215, 71) !important;
+    border: 1px solid rgb(172, 215, 71) !important;
+
+}
+
+.resume:hover{
+    transform: scale(1.05);
+    color: rgb(255, 255, 255) !important;
+    border: 1px solid rgb(172, 215, 71) !important;
+
+}
+
+.home {
+  display: flex;
+  margin-bottom: 120px;
+  min-height: 50vh;
+}
+
+.home-left {
+  width: 70%;
+}
+
+.home-right {
+  width: 30%;
+}
+
+.home-right img {
+  height: 500px;
+  margin-top: 30px;
+  margin-left: -120px;
+}
+
+.role-tag{
+    width: 300px; 
+    margin: 100px 0 0 150px; 
+    padding: 8px 55px; 
+    background: rgba(172, 215, 71, 0.13); 
+    color: rgb(172, 215, 71); 
+    border-radius: 20px;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.home-title.mobile-3{
+    margin-top: 30px;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.name{
+    margin-left: 150px;
+}
+
+.highlight{
+    background: linear-gradient(180deg, black, rgb(172, 215, 71));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-weight: bold;
+}
+
+.home-desc.mobile-4{
+    width: 700px; 
+    margin: 30px 0 0 150px;
+}
+
+.gray{
+    color: gray;
+}
+
+.green{
+    color: rgb(172, 215, 71);
+}
+
+.home-buttons{
+display: flex;
+gap: 20px;
+margin: 40px 0 0 150px;
+}
+
+.exploreprojects{
+    background-color: rgb(172, 215, 71);
+    font-size: 12px;
+    color: black; 
+    border: none; 
+    padding: 14px 25px; 
+    border-radius: 25px; 
+    font-weight:bold; 
+    margin-right: 25px;
+}
+
+.resume{
+    background-color: black; 
+    color: white; 
+    font-size: 12px;
+    padding: 14px 40px; 
+    border-radius: 25px; 
+    font-weight: bold; 
+    border: 1px solid white;
+}
+
+/* keep all your existing desktop margins exactly */
+
+
+@media (max-width: 1400px) {
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-title {
+    text-align: center !important;
+  }
+
+  .name{
+    margin-left: -10px !important;
+  }
+
+  
+
+  .home-left,
+  .home-right {
+    width: 100%;
+  }
+
+  /* MOBILE ORDER */
+  .mobile-1 { order: 1; }
+  .mobile-2 { order: 2; }
+  .mobile-3 { order: 3; }
+  .mobile-4 { order: 4; }
+  .mobile-5 { order: 5; }
+
+  .home-right img {
+    height: 320px;
+    margin: 20px 0;
+  }
+
+  
+
+
+  .role-tag,
+  .home-title,
+  .home-desc,
+  .home-buttons {
+    margin: 20px auto;
+  }
+
+  .role-tag {
+    font-size: 12px;
+  }
+
+  .home-desc.mobile-4 {
+    margin: 20px auto !important;   /* ⭐ override left margin */
+    width: 90% !important;          /* ⭐ responsive width */
+    text-align: center !important;
+  }
+
+  .home-buttons {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
