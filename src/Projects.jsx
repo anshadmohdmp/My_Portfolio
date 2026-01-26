@@ -61,9 +61,11 @@ const Projects = () => {
                     <p style={{ marginTop: "20px", color: "rgba(144, 144, 144, 1)", backgroundColor: "transparent" }}>
                         A comprehensive ERP application designed to manage core business operations...
                     </p>
+                    <a style={{backgroundColor:"transparent"}} href="https://blush-bloom-chi.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <button style={{ backgroundColor: 'rgb(172, 215, 71)', fontSize: "12px", color: 'black', border: 'none', padding: '14px 25px', borderRadius: '15px', fontWeight: "bold", marginRight: "20px", marginTop: "20px" }}>
                         Current Link <FaLink style={{ color: "black", backgroundColor: "transparent", width: "14px", height: "14px" }} />
                     </button>
+                    </a>
                 </div>
             </div>
 
